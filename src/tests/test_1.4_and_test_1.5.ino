@@ -1,5 +1,8 @@
 /* Name: touch_motion_sensor
  * Description: This file is used solely to test the functionality motion and touch sensors.
+ * Note: Should probably make a switch case in order to better integrate later on. 
+ * When doing the Mocking test, the motion sensor is a bit flimsy.
+ * May or may not take Motion sensor out of design due to attach/detach instructions. Needs further testing.
  * Date: 7/16/2021
 
  * The circuit:
@@ -33,7 +36,8 @@ void setup() {
 
 void loop() {
   
-  int sensorDetected = digitalRead(TouchPin);
+  // variables to detect if touch for touch sensor, movement for motion sensor
+  int sensorDetected = digitalRead(TouchPin); 
   int motionDetected = digitalRead(MotionPin);
   
   // sensor is being touched, motion sensor detects movement
